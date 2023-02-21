@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <!-- jquery ui datepicker -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css">
+      </head>
+
+      <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 25px;
+    margin-top: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+        label{
+            font-size: 22px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+    /* display: block; */
+    align-items: center;
+    text-align: center;
+        }
+
+        input{
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+}
+      </style>
+    <title>Date and Time</title>
+</head>
+<body>
+   <div class="container">
+    <label for="datetime">Date And Time:</label>
+    <input type="text" class="datetimepicker" name="datetime" placeholder="Select a date and time">
+   </div>
+
+    <!-- using jquery ui datepicker -->
+    <script>
+        $(function() {
+          $('.datetimepicker').datetimepicker({
+            dateFormat: 'yy-mm-dd', // set the date format
+            timeFormat: 'HH:mm:ss', // set the time format
+            controlType: 'select', // set the control type to dropdown menu
+            oneLine: true // display the date and time input in one line
+          });
+        });
+      </script>
+      
+
+</body>
+</html>
